@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Tc-ak-uEC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CodeVC-->
+        <scene sceneID="Pvv-IZ-2d4">
+            <objects>
+                <viewController id="0Tc-ak-uEC" customClass="QRCodeVC" customModule="Pusaka" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="96z-H5-83y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzi-HD-dpR">
+                                <rect key="frame" x="89" y="34" width="197" height="68.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="50"/>
+                                <color key="textColor" red="0.99215686270000003" green="0.81568627449999997" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpX-9o-yAP">
+                                <rect key="frame" x="112.5" y="258.5" width="150" height="150"/>
+                                <color key="tintColor" red="0.99215686270000003" green="0.81568627449999997" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="focus"/>
+                                <connections>
+                                    <segue destination="dir-o4-aaR" kind="presentation" identifier="dummy" id="CIq-6r-Nod"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90196078430000004" green="0.36470588240000001" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fpX-9o-yAP" firstAttribute="centerY" secondItem="96z-H5-83y" secondAttribute="centerY" id="5gA-2A-4au"/>
+                            <constraint firstItem="Jzi-HD-dpR" firstAttribute="centerX" secondItem="g6a-qI-JhS" secondAttribute="centerX" id="Lhy-6C-kZa"/>
+                            <constraint firstItem="Jzi-HD-dpR" firstAttribute="top" secondItem="g6a-qI-JhS" secondAttribute="top" constant="14" id="Pba-61-QPd"/>
+                            <constraint firstItem="fpX-9o-yAP" firstAttribute="centerX" secondItem="g6a-qI-JhS" secondAttribute="centerX" id="THE-C2-uFf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g6a-qI-JhS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aci-d3-mXD" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42" y="134"/>
+        </scene>
+        <!--ScannerVC-->
+        <scene sceneID="NrD-Nq-WYo">
+            <objects>
+                <viewController id="dir-o4-aaR" customClass="QRScannerVC" customModule="Pusaka" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Ae-9a-Kwu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNw-Mg-aOo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1P-Jh-q8h">
+                                        <rect key="frame" x="165.5" y="38" width="44" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8c-VC-qkX">
+                                        <rect key="frame" x="15" y="39" width="18" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="8vd-DU-VwI"/>
+                                            <constraint firstAttribute="width" constant="18" id="Wib-L6-tth"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="18" id="bhK-36-kj3"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="cross"/>
+                                        <connections>
+                                            <segue destination="XBI-Np-bco" kind="unwind" unwindAction="unwindToHomeScreenWithSegue:" id="i7l-Xh-P82"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="v8c-VC-qkX" secondAttribute="bottom" constant="13" id="LmS-d8-qqQ"/>
+                                    <constraint firstAttribute="height" constant="70" id="QCp-XD-Ip5"/>
+                                    <constraint firstAttribute="bottom" secondItem="x1P-Jh-q8h" secondAttribute="bottom" constant="8" id="jVU-0Z-Vza"/>
+                                    <constraint firstItem="x1P-Jh-q8h" firstAttribute="centerX" secondItem="qNw-Mg-aOo" secondAttribute="centerX" id="lwU-dF-53K"/>
+                                    <constraint firstItem="v8c-VC-qkX" firstAttribute="leading" secondItem="qNw-Mg-aOo" secondAttribute="leading" constant="15" id="qRw-5R-cLE"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR code is detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbv-QQ-v8J">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gDr-vq-AEh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qNw-Mg-aOo" firstAttribute="leading" secondItem="7Ae-9a-Kwu" secondAttribute="leading" id="4fQ-ki-g7S"/>
+                            <constraint firstItem="qNw-Mg-aOo" firstAttribute="top" secondItem="7Ae-9a-Kwu" secondAttribute="top" id="6GA-v0-hTb"/>
+                            <constraint firstItem="LCE-54-Jmd" firstAttribute="trailing" secondItem="qNw-Mg-aOo" secondAttribute="trailing" id="7NI-Cs-BQb"/>
+                            <constraint firstItem="LCE-54-Jmd" firstAttribute="bottom" secondItem="Dbv-QQ-v8J" secondAttribute="bottom" id="CMj-Vp-TJU"/>
+                            <constraint firstItem="LCE-54-Jmd" firstAttribute="trailing" secondItem="Dbv-QQ-v8J" secondAttribute="trailing" id="CN8-to-kSm"/>
+                            <constraint firstItem="Dbv-QQ-v8J" firstAttribute="leading" secondItem="LCE-54-Jmd" secondAttribute="leading" id="WkF-IV-raP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LCE-54-Jmd"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="Dbv-QQ-v8J" id="4yq-Dc-0gG"/>
+                        <outlet property="topbar" destination="qNw-Mg-aOo" id="79f-uy-3Zb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wO0-Yh-JuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="XBI-Np-bco" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="742" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cross" width="40" height="40"/>
+        <image name="focus" width="150" height="150"/>
+    </resources>
+</document>
